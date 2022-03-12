@@ -1,3 +1,3 @@
 # Note App
 
-!(https://github.com/gamzerol/ColorNote-App/app.PNG)
+![](https://github.com/gamzerol/ColorNote-App/blob/master/app.PNG)
