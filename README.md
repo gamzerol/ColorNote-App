@@ -1,3 +1,3 @@
 # Note App
 
-![alt text](/app.PNG)
+![alt text](/client/app.PNG)
