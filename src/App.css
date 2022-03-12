@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50vw;
+  margin: auto;
+}
+.header .headerTitle {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 3rem 0;
+  /*background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    font-size: 40px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+}
+.header .search {
+  width: 100%;
+  text-align: center;
+}
+.header .search-item {
+  width: 40%;
+  transition: transform .3s ease;
+}
+
+.header .search-item:focus {
+  transform: scale(1.05);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 0.5rem;
+}
+.form .title {
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 0;
+  padding: 3px 8px;
+  border-bottom: 1px dashed #f4bcbc;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.1rem;
+}
+.form textarea {
+  border: none;
+  margin-bottom: 1rem;
+  height: 5rem;
+}
+
+.form .buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form .buttonWrapper .colors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form input[type="radio"] {
+  background: transparent;
+  width: inherit;
+  display: none;
+  margin: 0;
+}
+.form input[type="radio"] + label {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #f1f2f3;
+  margin-right: 0.5rem;
+  font-weight: normal;
+  cursor: pointer;
+  margin-bottom: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  border-radius: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -khtml-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.form input[type="radio"] + label svg {
+  display: none;
+}
+.form input[type="radio"] + label:hover {
+  transform: scale(1.1);
+}
+.form input[type="radio"]:checked + label svg{
+  display: block;
+  font-size: 1rem;
+  transform: scale(1.1);
+}
+.form .btnAdd {
+  padding: 0.4rem 1.5rem;
+  border: none;
+  background-color: #e57474;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+}
+.noteList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
+.noteList .note {
+  width: 22%;
+  margin-right: 1.6%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.noteList .note:nth-child(4n) {
+  margin-right: 0;
+}
+.noteList .note:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.noteList .noteHeader {
+  display: flex;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+.noteList .deleteNote {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+}
+.noteList .noteDetails {
+  height: 10rem;
+  font-size: 1rem;
+  overflow-y: scroll;
+  margin: 5px;
+  max-width: 100%;
+  line-break: anywhere;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eeeeee; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 66, 66); 
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
